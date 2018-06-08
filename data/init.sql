@@ -1,0 +1,11 @@
+CREATE DATABASE Ibrido;
+
+use Ibrido;
+
+CREATE TABLE takers (
+	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	firstname VARCHAR(30) NOT NULL,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	date TIMESTAMP
+);

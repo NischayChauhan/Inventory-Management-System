@@ -1,0 +1,36 @@
+html, body {
+	background: #222;
+	color: white;
+}
+#outerDiv{
+	position: absolute;
+	top: 37%;
+	width: 100%;
+}
+
+#form{
+    margin: auto;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+.formInput{
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border: none;
+	height: 30px;
+	text-align: center;
+	width: 280px;
+	margin:10px;
+}
+.submitBtn{
+	background-color: rgba(0, 204, 255,0.8);
+	color: white;
+	border: none;
+	/*height: 30px;*/
+	text-align: center;
+	width: 280px;
+	margin:10px;
+	padding: 5px 0px;
+}

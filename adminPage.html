@@ -1,0 +1,90 @@
+<!-- <?php
+if (isset($_POST['submit'])) {
+    require "config.php";
+    require "common.php";
+    try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        
+        $new_user = array(
+            "firstname" => $_POST['firstname'],
+            "username"  => $_POST['username'],
+            "password"  => $_POST['password'],
+        );
+
+        $sql = sprintf(
+            "INSERT INTO %s (%s) values (%s)",
+            "takers",
+            implode(", ", array_keys($new_user)),
+            ":" . implode(", :", array_keys($new_user))
+        );
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
+    } catch(PDOException $error) {
+        echo "<br>" . $error->getMessage();
+    }
+}
+?> -->
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+    <link rel="stylesheet" href="css/database.adminPage.css">
+</head>
+<body>
+    <div id="particle-container"></div>
+
+    <h1>ADMINISTRATOR</h1>
+    <div id="outerDiv">
+        <button  class="btn" onclick="insertUser()">Insert a user</button>
+        <button class="btn" onclick="insertComp()">Insert a components</button>
+        <button class="btn" onclick="viewComp()">View all components</button>
+        <button class="btn" onclick="viewUser()">View all users</button>
+    </div>
+
+    <div id="insertUser">   
+        <div id="form">
+                <form action="php/insertUser.php" method="POST">
+                    <input type="text" name="Name" placeholder="Full-Name" class="formInput" id="userName" /><br>
+                    <input type="text" name="Username" placeholder="Please give a username" class="formInput" id="userName" /><br>
+                    <input type="password" name="Pass" placeholder="Please set a password" class="formInput" id="password" />   <br>         
+                    <input type="submit" name="submit" class="submitBtn" />
+                </form>
+        </div>
+    </div>
+    <div id="insertComp">   
+        <div id="form">
+                <form action="php/insertComp.php" method="POST">
+                    <input type="text" name="Name" placeholder="Name" class="formInput" id="userName" /><br>
+                    <input type="text" name="Pass" placeholder="Drive Link Of Image" class="formInput" id="password" /><br>       
+                    <input type="submit" name="submit" class="submitBtn" />
+                </form>
+        </div>
+    </div>
+    <div id="viewComp">
+        <div id="form">
+                <form action="php/viewComp.php" method="POST">
+                    <!-- mainView -->
+                </form>
+        </div>
+    </div>
+    <div id="viewUser">
+        <div id="form">
+                <form action="php/viewUser.php" method="POST">
+                    <!-- generate a dyanamic lis -->
+                </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="js/database.adminPage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
+
+
+
+
+

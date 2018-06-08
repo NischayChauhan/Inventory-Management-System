@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background: #ecf3f3;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+#particle-container {
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+}
+#outerDiv{	
+	position: absolute;
+	top: 37%;
+	width: 100%;
+	text-align: center;
+}
+.btn{
+    background-color: rgba(52,228,234,0.7);
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+#insertUser, #insertComp, #viewComp, #viewUser{
+  display: none;
+  position: absolute;
+  top: 37%;
+  width: 100%;
+  text-align: center;
+}
+#form{}
+.formInput{
+  background-color: rgba(255,255,255,0.5);
+  border:none;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  font-size: 10px;
+}
+.submitBtn{
+  background-color: rgba(0,0,0,0.4);
+  border: none;
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 50%;
+}
